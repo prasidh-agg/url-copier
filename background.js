@@ -10,3 +10,8 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     });
   }
 });
+
+// background.js
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log(request.message);
+});
